@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lilita One', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    padding: 12px;
+    background: url(./images/abstract-light-bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.invisible {
+    display: none;
+}
+
+/*********** Title ***********/
+.title {
+    font-size: 36px;
+    background: linear-gradient(to right, #c44444 50%, #7f52b3 50%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    background-clip: text;
+    display: block;
+    margin-bottom: 40px;
+    margin-left: 32px;
+        
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 10s linear infinite;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 600% center;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+/*********** Theme picker carousel ***********/
+.theme-title {
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+    color: rgb(254, 169, 227);
+    text-shadow: 2px 2px 8px black;
+    margin-bottom: 16px;
+}
+
+.slider {
+    background-color: transparent;
+    width: 300px;
+    height: 132px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 2px 2px 12px black;
+}
+        
+.imgs_slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+        
+/* We have to set display: none; 
+  If not, all of our images would  
+  be visible at the same time */
+.imgs_slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 300px;
+    height: 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+        
+/* css for slide navigation */
+.navigation {
+    position: absolute;
+    width: 300px;
+    margin-top: -28px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-btn {
+    border: 2px solid #de6a23;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navigation-btn:hover, .navigation-btn:checked {
+    background: #de6a23;
+}
+        
+/* The checked attribute is used with 
+reference to <input type="radio">,  
+when radio button is clicked the  
+class will shift w.r.t  left margin  
+as mentioned which results in image  
+slider */
+#radio1:checked~.first {
+    margin-left: 0;
+}
+        
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+        
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+        
+#radio4:checked~.first {
+    margin-left: -75%;
+}
+
+.searchQuery {
+    width: 300px;
+    height: 30px;
+    padding: 10px 10px;
+    float: left;
+    color: #23083f;
+    border: 0;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    margin-bottom: 12px;
+    box-shadow: 2px 2px 12px black;
+}
+
+.searchQuery:focus {
+    outline: 0;
+}
+
+
+.start-btn {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: rgb(254, 169, 227);
+    border: 1px solid rgb(254, 169, 227);
+    box-shadow: 2px 2px 4px black;
+
+    color: #fff;
+    text-align: center;
+    font-family: inherit;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px black;
+    transition: background-color (--transition), border (--transition);
+}
+
+.start-btn:hover {
+    background-color: rgb(255, 130, 216);
+    border: 1px solid rgb(255, 130, 216);
+}
+
+.start-btn:active {
+    box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+}
+
+.start-btn:disabled {
+    background-color: rgb(203, 163, 190);
+    border: 1px solid rgb(203, 163, 190);
+}
+
+.notiflix-notify-failure {
+    text-align: center;
+}
+
+/*********** Game field ***********/
+
+.cards-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 800px;
+    gap: 10px;
+}
+
+.cards-item {
+    width: 120px;
+    height: 176px;
+    perspective: 400px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+
+.card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px black;
+}
+
+.card__face--front {
+    background-image: url(./images/question-mark.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card__face--back {
+    background-color: rgb(253, 233, 247);
+    transform: rotateY(180deg);
+}
+
+.card__face--back img {
+    height: 100%;
+    border-radius: 20px;
+}
