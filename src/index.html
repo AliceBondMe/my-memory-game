@@ -181,7 +181,38 @@
   <input type="text" name="searchQuery" autocomplete="off" placeholder="Type your theme in here" class="searchQuery invisible"/>
 
   <button class="start-btn">START THE GAME</button>
+  <button class="restart-btn invisible">QUIT THIS GAME & RESTART</button>
+
+  <div class="timer-best invisible">
+    <p class="timer-description">Your best score:</p>
+    <div class="timer-clock">
+      <div class="timer-field">
+        <span class="timer-value" data-b-minutes>00</span>
+        <span class="timer-label">Minutes</span>
+      </div>
+      <div class="timer-field">
+        <span class="timer-value" data-b-seconds>00</span>
+        <span class="timer-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="timer invisible">
+    <p class="timer-description">Current game time:</p>
+    <div class="timer-clock">
+      <div class="timer-field">
+        <span class="timer-value" data-minutes>00</span>
+        <span class="timer-label">Minutes</span>
+      </div>
+      <div class="timer-field">
+        <span class="timer-value" data-seconds>00</span>
+        <span class="timer-label">Seconds</span>
+      </div>
+    </div>
+  </div>
+
 </section>
+
 
   <script src="./js/index.js" type="module"></script>
 </body>

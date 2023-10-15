@@ -45,10 +45,6 @@ img {
     object-fit: cover;
 }
 
-.invisible {
-    display: none;
-}
-
 /*********** Title ***********/
 .title {
     font-size: 36px;
@@ -191,10 +187,10 @@ slider */
 }
 
 
-.start-btn {
-    display: block;
+.start-btn, .restart-btn {
     margin: 0 auto;
-    width: 200px;
+    margin-bottom: 12px;
+    width: 240px;
     height: 32px;
     border-radius: 4px;
     background-color: rgb(254, 169, 227);
@@ -210,12 +206,12 @@ slider */
     transition: background-color (--transition), border (--transition);
 }
 
-.start-btn:hover {
+.start-btn:hover, .restart-btn:hover {
     background-color: rgb(255, 130, 216);
     border: 1px solid rgb(255, 130, 216);
 }
 
-.start-btn:active {
+.start-btn:active, .restart-btn:active {
     box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
 }
 
@@ -227,6 +223,35 @@ slider */
 .notiflix-notify-failure {
     text-align: center;
 }
+
+/*********** Timer ***********/
+.timer, .timer-best {
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 16px;
+}
+
+.timer-description {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.timer-clock {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.timer-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-value {
+    font-size: 36px;
+}
+
 
 /*********** Game field ***********/
 
@@ -282,4 +307,8 @@ slider */
 .card__face--back img {
     height: 100%;
     border-radius: 20px;
+}
+
+.invisible {
+    display: none;
 }
