@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Lilita One';
+    src: url('./fonts/LilitaOne.eot');
+    src: url('./fonts/LilitaOne.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/LilitaOne.woff2') format('woff2'),
+        url('./fonts/LilitaOne.woff') format('woff'),
+        url('./fonts/LilitaOne.ttf') format('truetype'),
+        url('./fonts/LilitaOne.svg#LilitaOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +21,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
-    padding: 4px;
+    padding: 8px;
     background: url(./images/abstract-light-bg.jpg) no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -82,8 +96,9 @@ img {
     text-align: center;
     font-family: 'Lilita One', cursive;
     font-size: 14px;
-    color: rgb(254, 169, 227);
-    text-shadow: 2px 2px 4px black;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black;
     margin-bottom: 8px;
 }
 
@@ -195,7 +210,7 @@ slider */
 .start-btn,
 .restart-btn {
     margin: 0 auto;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     width: 160px;
     height: 24px;
     border-radius: 4px;
@@ -328,23 +343,24 @@ slider */
 }
 
 
-/*********** Tablet landscape styles ***********/
-
-@media screen and (min-width: 1024px) {
-
+.orient-notification {
+    position: absolute;
+    margin-top: 90%;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
 }
 
 
-/*********** Desctop styles ***********/
+/*********** Tablet landscape styles ***********/
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
 
     body {
         padding: 12px;
     }
 
     .title {
-        font-size: 36px;
+        font-size: 32px;
         margin-bottom: 40px;
         margin-left: 32px;
     }
@@ -352,23 +368,21 @@ slider */
     .theme-title {
         font-size: 24px;
         margin-bottom: 16px;
-        text-shadow: 2px 2px 8px black;
     }
 
     .slider {
-        width: 300px;
-        height: 132px;
+        width: 260px;
+        height: 114px;
         margin-bottom: 12px;
     }
 
     .slide img {
-        width: 300px;
-        height: 100%;
+        width: 260px;
     }
 
     .navigation {
-        width: 300px;
-        margin-top: -28px;
+        width: 260px;
+        margin-top: -22px;
     }
 
     .navigation-btn {
@@ -377,23 +391,92 @@ slider */
     }
 
     .navigation-btn:not(:last-child) {
-        margin-right: 40px;
+        margin-right: 36px;
     }
 
     .searchQuery {
-        font-size: 20px;
-        width: 300px;
+        font-size: 14px;
+        width: 260px;
         height: 30px;
         padding: 10px 10px;
         margin-bottom: 12px;
-        box-shadow: 2px 2px 12px black;
     }
 
     .start-btn,
     .restart-btn {
-        width: 240px;
-        height: 32px;
+        width: 260px;
+        height: 36px;
         font-size: 18px;
+    }
+
+    .timer,
+    .timer-best {
+        margin-bottom: 12px;
+    }
+
+    .timer-description,
+    .timer-label {
+        font-size: 22px;
+    }
+
+    .timer-value {
+        font-size: 32px;
+    }
+
+    .cards-list {
+        width: 640px;
+        gap: 8px;
+    }
+
+    .cards-item {
+        width: 100px;
+        height: 146px;
+        perspective: 400px;
+    }
+
+    .card__face,
+    .card__face--back img {
+        border-radius: 14px;
+    }
+
+}
+
+
+/*********** Desctop styles ***********/
+
+@media screen and (min-width: 1280px) {
+
+    .title {
+        font-size: 36px;
+    }
+
+    .slider {
+        width: 300px;
+        height: 132px;
+    }
+
+    .slide img {
+        width: 300px;
+    }
+
+    .navigation {
+        width: 300px;
+        margin-top: -28px;
+    }
+
+    .navigation-btn:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .searchQuery {
+        font-size: 16px;
+        width: 300px;
+    }
+
+    .start-btn,
+    .restart-btn {
+        width: 300px;
+        font-size: 20px;
     }
 
     .timer,
@@ -418,12 +501,10 @@ slider */
     .cards-item {
         width: 120px;
         height: 176px;
-        perspective: 400px;
     }
 
     .card__face,
     .card__face--back img {
         border-radius: 20px;
     }
-
 }
