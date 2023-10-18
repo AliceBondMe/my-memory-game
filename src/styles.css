@@ -7,7 +7,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
-    padding: 12px;
+    padding: 4px;
     background: url(./images/abstract-light-bg.jpg) no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -45,18 +45,20 @@ img {
     object-fit: cover;
 }
 
+/*********** Mobile landscape styles (568 px) ***********/
+
 /*********** Title ***********/
 .title {
-    font-size: 36px;
+    font-size: 16px;
     background: linear-gradient(to right, #c44444 50%, #7f52b3 50%);
     background-size: auto auto;
     background-clip: border-box;
     background-size: 200% auto;
     background-clip: text;
     display: block;
-    margin-bottom: 40px;
-    margin-left: 32px;
-        
+    margin-bottom: 16px;
+    margin-left: 8px;
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textclip 10s linear infinite;
@@ -79,27 +81,28 @@ img {
 .theme-title {
     text-align: center;
     font-family: 'Lilita One', cursive;
+    font-size: 14px;
     color: rgb(254, 169, 227);
-    text-shadow: 2px 2px 8px black;
-    margin-bottom: 16px;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 8px;
 }
 
 .slider {
     background-color: transparent;
-    width: 300px;
-    height: 132px;
+    width: 160px;
+    height: 70px;
     border-radius: 4px;
     overflow: hidden;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     box-shadow: 2px 2px 12px black;
 }
-        
+
 .imgs_slides {
     width: 400%;
     height: 100%;
     display: flex;
 }
-        
+
 /* We have to set display: none; 
   If not, all of our images would  
   be visible at the same time */
@@ -113,7 +116,7 @@ img {
 }
 
 .slide img {
-    width: 300px;
+    width: 160px;
     height: 100%;
 }
 
@@ -121,32 +124,33 @@ fieldset {
     border: none;
     padding: 0;
 }
-        
+
 /* css for slide navigation */
 .navigation {
     position: absolute;
-    width: 300px;
-    margin-top: -28px;
+    width: 160px;
+    margin-top: -16px;
     display: flex;
     justify-content: center;
 }
 
 .navigation-btn {
     border: 2px solid #de6a23;
-    padding: 5px;
+    padding: 4px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
 }
 
 .navigation-btn:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
-.navigation-btn:hover, .navigation-btn:checked {
+.navigation-btn:hover,
+.navigation-btn:checked {
     background: #de6a23;
 }
-        
+
 /* The checked attribute is used with 
 reference to <input type="radio">,  
 when radio button is clicked the  
@@ -156,29 +160,30 @@ slider */
 #radio1:checked~.first {
     margin-left: 0;
 }
-        
+
 #radio2:checked~.first {
     margin-left: -25%;
 }
-        
+
 #radio3:checked~.first {
     margin-left: -50%;
 }
-        
+
 #radio4:checked~.first {
     margin-left: -75%;
 }
 
 .searchQuery {
-    width: 300px;
-    height: 30px;
-    padding: 10px 10px;
+    font-size: 12px;
+    width: 160px;
+    height: 16px;
+    padding: 6px 6px;
     float: left;
     color: #23083f;
     border: 0;
     background: rgb(255, 255, 255);
     border-radius: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     box-shadow: 2px 2px 12px black;
 }
 
@@ -187,11 +192,12 @@ slider */
 }
 
 
-.start-btn, .restart-btn {
+.start-btn,
+.restart-btn {
     margin: 0 auto;
     margin-bottom: 12px;
-    width: 240px;
-    height: 32px;
+    width: 160px;
+    height: 24px;
     border-radius: 4px;
     background-color: rgb(254, 169, 227);
     border: 1px solid rgb(254, 169, 227);
@@ -200,18 +206,20 @@ slider */
     color: #fff;
     text-align: center;
     font-family: inherit;
-    font-size: 18px;
+    font-size: 11px;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px black;
     transition: background-color (--transition), border (--transition);
 }
 
-.start-btn:hover, .restart-btn:hover {
+.start-btn:hover,
+.restart-btn:hover {
     background-color: rgb(255, 130, 216);
     border: 1px solid rgb(255, 130, 216);
 }
 
-.start-btn:active, .restart-btn:active {
+.start-btn:active,
+.restart-btn:active {
     box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
 }
 
@@ -225,14 +233,16 @@ slider */
 }
 
 /*********** Timer ***********/
-.timer, .timer-best {
+.timer,
+.timer-best {
     color: #fff;
     text-shadow: 1px 1px 2px black;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .timer-description {
-    font-size: 24px;
+    text-align: center;
+    font-size: 12px;
     margin-bottom: 4px;
 }
 
@@ -249,7 +259,11 @@ slider */
 }
 
 .timer-value {
-    font-size: 36px;
+    font-size: 14px;
+}
+
+.timer-label {
+    font-size: 12px;
 }
 
 
@@ -260,14 +274,14 @@ slider */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    width: 800px;
-    gap: 10px;
+    width: 356px;
+    gap: 4px;
 }
 
 .cards-item {
-    width: 120px;
-    height: 176px;
-    perspective: 400px;
+    width: 56px;
+    height: 82px;
+    perspective: 200px;
 }
 
 .card {
@@ -289,7 +303,7 @@ slider */
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 20px;
+    border-radius: 8px;
     box-shadow: 2px 2px 4px black;
 }
 
@@ -306,9 +320,110 @@ slider */
 
 .card__face--back img {
     height: 100%;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 .invisible {
     display: none;
+}
+
+
+/*********** Tablet landscape styles ***********/
+
+@media screen and (min-width: 1024px) {
+
+}
+
+
+/*********** Desctop styles ***********/
+
+@media screen and (min-width: 1280px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 36px;
+        margin-bottom: 40px;
+        margin-left: 32px;
+    }
+
+    .theme-title {
+        font-size: 24px;
+        margin-bottom: 16px;
+        text-shadow: 2px 2px 8px black;
+    }
+
+    .slider {
+        width: 300px;
+        height: 132px;
+        margin-bottom: 12px;
+    }
+
+    .slide img {
+        width: 300px;
+        height: 100%;
+    }
+
+    .navigation {
+        width: 300px;
+        margin-top: -28px;
+    }
+
+    .navigation-btn {
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .navigation-btn:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    .searchQuery {
+        font-size: 20px;
+        width: 300px;
+        height: 30px;
+        padding: 10px 10px;
+        margin-bottom: 12px;
+        box-shadow: 2px 2px 12px black;
+    }
+
+    .start-btn,
+    .restart-btn {
+        width: 240px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .timer,
+    .timer-best {
+        margin-bottom: 16px;
+    }
+
+    .timer-description,
+    .timer-label {
+        font-size: 24px;
+    }
+
+    .timer-value {
+        font-size: 36px;
+    }
+
+    .cards-list {
+        width: 800px;
+        gap: 10px;
+    }
+
+    .cards-item {
+        width: 120px;
+        height: 176px;
+        perspective: 400px;
+    }
+
+    .card__face,
+    .card__face--back img {
+        border-radius: 20px;
+    }
+
 }

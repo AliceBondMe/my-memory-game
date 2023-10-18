@@ -43,6 +43,11 @@ let msTime = 0;
 const BEST_TIME_KEY = "best-time";
 const bestTime = JSON.parse(localStorage.getItem(BEST_TIME_KEY));
 
+if (screen.orientation.type === "portrait-primary"
+  || screen.orientation.type === "portrait-secondary") {
+    Notiflix.Notify.failure("You should rotate your device to landscape to play conveniently", notiflixParams);
+  }
+
 refs.themeChoice.addEventListener("click", handleThemeChoice);
 refs.startBtn.addEventListener("click", handleStartGame);
 refs.restartBtn.addEventListener("click", handleRestartGame);
