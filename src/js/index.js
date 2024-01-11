@@ -83,7 +83,7 @@ function handleStartGame() {
         startNewGame();
         startFlippingCards();
       })
-      .catch((err) => console.log(err));
+      .catch(({response}) => console.log(response.status));
   } else {
     currentGameCardset = createGameCardset(images[currentGameTheme]);
     
